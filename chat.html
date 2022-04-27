@@ -44,7 +44,7 @@
 
                 <form action="" method="get">
                     <input type="text" name="message" id="message" placeholder="Ecrivez votre message ici..." required>
-                    <label for="message">Pseudo</label>
+                    <label for="message" class="userID"></label>
                     <input type="submit" value="Envoyer">
                 </form>
             </main>            
@@ -52,12 +52,20 @@
             <aside class="content_box">
                 <h3>Liste des utilisateurs</h3>
                 <ul>
-                    <li id="userID">Pseudo</li>
+                    <li class="userID"></li>
                     <li>Utilisateur 1</li>
                     <li>Utilisateur 2</li>
                     <li>Utilisateur 3</li>
                 </ul>
             </aside>
         </div>
+
+        <script>
+            const pseudoFields = document.querySelectorAll('.userID');
+            let pseudo = new URLSearchParams(location.search).get('pseudo');
+            if (!pseudo) {pseudo = 'Anonymous'}
+
+            pseudoFields.forEach(element => {element.innerText = pseudo});            
+        </script>
     </body>
 </html>
