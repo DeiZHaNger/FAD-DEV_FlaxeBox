@@ -1,0 +1,74 @@
+body {
+    background-color: aliceblue;
+}
+
+header {
+    margin: auto;
+    overflow: clip;
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.8em;
+    margin: 1.6em 0.8em 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    padding: 0.8em;
+    background-color: white;
+    border: 1px solid black;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.8em;
+}
+
+.custom_button {
+    font-family: inherit;
+    font-size: 1em;
+    background-color: black;
+    color: whitesmoke;
+    padding: 0.6em 1.2em;
+    border: 1px solid transparent;
+    cursor: pointer;
+    min-width: 7em;
+}
+
+.custom_button:hover {
+    background-color: darkslategrey;
+}
+
+.custom_button:active {
+    background-color: lightslategrey;
+    border: 2px inset slategrey;
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    section {
+        flex-wrap: wrap;
+    }   
+}

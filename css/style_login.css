@@ -1,0 +1,45 @@
+body {
+    background: bottom right/cover url('./images/flexbox_froggy.png');
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+form {
+    background-color: lightgrey;
+    border: 2px solid darkslategrey;
+    padding: 1.6em 2.4em;
+    min-width: 260px;
+}
+
+h1{
+    margin: 0 0 0.8em;
+    text-align: center;
+}
+
+div {
+    margin-bottom: 0.8em;
+    width: 100%;
+}
+
+.buttons_container {
+    margin: 1.6em 0 0;
+    text-align: center;
+}
+
+#remember {
+    margin: 0 0.6em 0 0;
+}
+
+label {
+    display: inline-block;
+    min-width: 40%;
+}
+
+input[type="submit"] {
+    margin-right: 0.8em;
+}
