@@ -22,7 +22,7 @@
 
         <div class="container">
             <main>
-                <div class="chat_display content_box">
+                <div id="chat_display" class="content_box">
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet odio hic repellendus consectetur deleniti. Nihil, nostrum totam. Nostrum, blanditiis illum, neque animi voluptatem ullam, delectus doloremque optio quasi et modi!
                     </p>
@@ -42,7 +42,8 @@
                     </p>
                 </div>
 
-                <form action="" method="get">
+                <form action="./chat.html" method="get">
+                    <input type="text" name="pseudo" id="pseudo" hidden>
                     <input type="text" name="message" id="message" placeholder="Ecrivez votre message ici..." required>
                     <label for="message" class="userID"></label>
                     <input type="submit" value="Envoyer">
@@ -60,12 +61,6 @@
             </aside>
         </div>
 
-        <script>
-            const pseudoFields = document.querySelectorAll('.userID');
-            let pseudo = new URLSearchParams(location.search).get('pseudo');
-            if (!pseudo) {pseudo = 'Anonymous'}
-
-            pseudoFields.forEach(element => {element.innerText = pseudo});            
-        </script>
+        <script src="./js/fake_chat.js"></script>
     </body>
 </html>
